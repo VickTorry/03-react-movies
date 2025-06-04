@@ -8,8 +8,7 @@ interface fetchMoviesResponse {
   results: Movie[];
 }
 
-export default function fetchMovies(query: string) {
-  console.log("🪵 VITE_TMDB_TOKEN at runtime:", API_TOKEN);
+export default function fetchMovies(query: string) {  
   return axios.get<fetchMoviesResponse>('https://api.themoviedb.org/3/search/movie', {
     headers: {
       Authorization: `Bearer ${API_TOKEN}`,
